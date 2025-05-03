@@ -1,7 +1,7 @@
 
 import os from 'node:os';
 
-export async function handleOSInfo(args) {
+export async function handleOSInfo(args, currentDir) {
   const option = args[0];
 
   switch (option) {
@@ -13,9 +13,9 @@ export async function handleOSInfo(args) {
       const cpus = os.cpus();
       console.log(`Total CPUs: ${cpus.length}`);
       const data = cpus.map((cpu, i) => ({
-        CPU: `#${i + 1}`,
-        Model: cpu.model,
-        Speed_GHz: (cpu.speed / 1000).toFixed(2)
+        "CPU": `#${i + 1}`,
+        "Model": cpu.model,
+        "Speed GHz": (cpu.speed / 1000).toFixed(2)
       }));
       console.table(data);
       break;
@@ -37,5 +37,5 @@ export async function handleOSInfo(args) {
       console.error('Invalid input');
   }
 
-  return;
+  return currentDir;
 }

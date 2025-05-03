@@ -36,6 +36,6 @@ export function cli(username) {
 
   rl.on('close', () => {
     console.log(`Thank you for using File Manager, ${username}, goodbye!`);
-    process.exit(0);
+    process.exit();
   });
 }

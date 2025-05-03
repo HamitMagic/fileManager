@@ -7,7 +7,7 @@ console.log(`Welcome to the File Manager, ${username}!`);
 
 cli(username);
 
-process.on('SIGINT', () => {
+process.on('SIGINFO', () => {
   console.log(`\nThank you for using File Manager, ${username}, goodbye!`);
   process.exit(0);
 });

@@ -1,5 +1,5 @@
 import { handleNavigation } from './navigation.js';
-import { handleFileOps } from './fileOperations.js';
+import { handleFileOperations } from './fileOperations.js';
 import { handleOSInfo } from './osInfo.js';
 import { handleHash } from './hash.js';
 import { handleCompress } from './compress.js';
@@ -12,11 +12,11 @@ export async function handleCommand(input, currentDir) {
   }
 
   if (['cat', 'add', 'rn', 'cp', 'mv', 'rm', 'mkdir'].includes(command)) {
-    return await handleFileOps(command, args, currentDir);
+    return await handleFileOperations(command, args, currentDir);
   }
 
   if (command === 'os') {
-    return await handleOSInfo(args);
+    return await handleOSInfo(args, currentDir);
   }
 
   if (command === 'hash') {

@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 
-export async function handleFileOps(command, args, currentDir) {
+export async function handleFileOperations(command, args, currentDir) {
   try {
     switch (command) {
       case 'cat': {
