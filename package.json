@@ -1,8 +1,15 @@
 {
     "name": "file-manager",
     "version": "1.0.0",
-    "type": "module",
+    "description": "This repository is the part of nodejs-assignments https://github.com/AlreadyBored/nodejs-assignments",
+    "type": "module", "engines": {
+        "node": ">=22.14.0"
+    },
     "scripts": {
         "start": "node src/app.js -- --username=UserName"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HamitMagic/fileManager.git"
     }
 }
